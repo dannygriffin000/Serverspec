@@ -3,7 +3,7 @@ require 'rspec/core/rake_task'
 require 'yaml'
 
 #yamlのload
-properties = YAML.load_file('./env/properties.yml')
+properties = YAML.load_file('./yml/properties.yml')
 
 #taskのdescriptionを定義
 desc "Run serverspec to all hosts"

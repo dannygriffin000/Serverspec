@@ -6,7 +6,7 @@ require 'yaml'
 #In version 2, Don't  RSpec.configure do |c| ---
 
 #yaml load
-properties = YAML.load_file('./env/properties.yml')
+properties = YAML.load_file('./yml/properties.yml')
 
 #sudo passwordを聞かれた場合
 if ENV['ASK_SUDO_PASSWORD']

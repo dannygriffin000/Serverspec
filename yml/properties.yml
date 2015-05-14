@@ -1,4 +1,4 @@
-host01:
+sensu.tsubauaaa.com:
   :roles:
     - roles
   :sshtimeout: 900
