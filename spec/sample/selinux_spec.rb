@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# SELinux should be disabled
 result = Specinfra.backend.run_command("cat /etc/redhat-release")
 if result[:exit_status] == 0
   describe file('/etc/selinux/config') do

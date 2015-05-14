@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# build-essential package installed
 describe package('autoconf') do
   it { should be_installed }
 end

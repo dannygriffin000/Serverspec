@@ -1,5 +1,6 @@
 sensu.tsubauaaa.com:
   :roles:
-    - roles
+    - sample
   :sshtimeout: 900
   :adduser: tsuba-admin
+  :sudo: tsuba-admin
