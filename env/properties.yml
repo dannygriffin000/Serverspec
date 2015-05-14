@@ -1,6 +1,5 @@
 host01:
   :roles:
-    - base
-    - user
+    - roles
   :sshtimeout: 900
   :adduser: tsuba-admin
