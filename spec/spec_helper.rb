@@ -5,7 +5,6 @@ require 'yaml'
 #In version 2, Don't include SpecInfra::Helper::_backend_type and SpecInfra::Helper::DetectOS
 #In version 2, Don't  RSpec.configure do |c| ---
 
-set :backend, :ssh
 #yaml load
 properties = YAML.load_file('./env/properties.yml')
 
@@ -25,15 +24,16 @@ set :path, '/sbin:/usr/sbin:/usr/local/sbin:$PATH'
 
 #TARGET_HOSTはRakefileで定義済
 host = ENV['TARGET_HOST']
+#specfile内で参照する
 #propertiesというhost属性値を定義
-#*_spec.rbファイルで利用
 set_property properties[host]
 
-set :backend, :ssh
 #read configuration from OpenSSH configuration files 
 options = Net::SSH::Config.for(host)
 #~/.ssh/configからUserを取得
 options[:user] ||= Etc.getlogin
+
+set :backend, :ssh
 set :host, host
 set :ssh_options, options
 #NOPASSWORD sudoする場合、true
