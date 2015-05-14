@@ -30,7 +30,7 @@ set_property properties[host]
 
 #read configuration from OpenSSH configuration files 
 options = Net::SSH::Config.for(host)
-#~/.ssh/configからUserを取得
+#~/.ssh/configからUserを取得,なければ現在のUser
 options[:user] ||= Etc.getlogin
 
 set :backend, :ssh
