@@ -20,8 +20,6 @@ else
   set :sudo_password, ENV['SUDO_PASSWORD']
 end
 
-set :path, '/sbin:/usr/sbin:/usr/local/sbin:$PATH'
-
 #TARGET_HOSTはRakefileで定義済
 host = ENV['TARGET_HOST']
 #specfile内で参照する
@@ -38,3 +36,4 @@ set :host, host
 set :ssh_options, options
 #NOPASSWORD sudoする場合、true
 set :request_pty, true
+set :path, '/sbin:/usr/sbin:/usr/local/sbin:$PATH'
