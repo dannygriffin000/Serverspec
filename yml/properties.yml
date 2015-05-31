@@ -4,3 +4,5 @@ test4:
   :sshtimeout: 900
   :adduser: tsuba-admin
   :sudo: tsuba-admin
+  :logrotate: daily
+  :logkeep: 90
