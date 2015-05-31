@@ -5,7 +5,7 @@ describe yumrepo('epel') do
   it { should be_enabled }
 end
 
-result = Specinfra.backend.run_command("cat /etc/redhat-release")
+result = Specinfra.backend.run_command('cat /etc/redhat-release')
 if result[:exit_status] == 0
   describe yumrepo('base') do
     it { should exist }

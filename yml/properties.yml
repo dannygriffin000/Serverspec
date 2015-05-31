@@ -1,4 +1,4 @@
-host1:
+test4:
   :roles:
     - sample
   :sshtimeout: 900

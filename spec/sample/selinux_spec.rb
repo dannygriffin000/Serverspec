@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-result = Specinfra.backend.run_command("cat /etc/redhat-release")
+result = Specinfra.backend.run_command('cat /etc/redhat-release')
 if result[:exit_status] == 0
   describe file('/etc/selinux/config') do
     it { should be_file }
