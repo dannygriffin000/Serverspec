@@ -6,7 +6,7 @@ require 'yaml'
 #In version 2, Don't  RSpec.configure do |c| ---
 
 #yaml load
-properties = YAML.load_file('./yml/properties.yml')
+properties = YAML.load_file('./yaml/properties.yaml')
 
 #sudo passwordを聞かれた場合
 if ENV['ASK_SUDO_PASSWORD']
@@ -26,7 +26,7 @@ host = ENV['TARGET_HOST']
 #propertiesというhost属性値を定義
 set_property properties[host]
 
-#read configuration from OpenSSH configuration files 
+#read configuration from OpenSSH configuration files
 options = Net::SSH::Config.for(host)
 #~/.ssh/configからUserを取得,なければ現在のUser
 options[:user] ||= Etc.getlogin
